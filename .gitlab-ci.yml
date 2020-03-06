@@ -1,0 +1,26 @@
+image: docker:latest
+
+services:
+  - docker:dind
+
+stages:
+  - build
+  - run
+  
+build_docker_image:
+  stage: build
+  script:
+    - docker login registry.gitlab.com -u $USER -p $PASSWORD
+    - docker build --no-cache --tag solution_for_weather .
+    - mkdir image
+    - docker save solution_for_weather > image/solution_for_weather.tar
+  artifacts:
+    paths:
+      - image
+
+run_docker_image:
+  stage: run 
+  script:
+    - docker load -i image/solution_for_weather.tar
+    - docker run --name solution_for_weather -d solution_for_weather
+
