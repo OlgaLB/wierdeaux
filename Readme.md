@@ -1,4 +1,4 @@
-1) To run the code locally:
+## To run the code locally:
 
 1. Install python3 if it's not installed already
 
@@ -13,7 +13,7 @@
 python3 HoeWarmIsHetInDelft.py
 
 
-2) To run a dockerized solution from the local machine:
+## To run a dockerized solution from the local machine:
 
 1. Install docker if it's not installed already
 
@@ -23,7 +23,7 @@ docker build --tag=get_temperature .
 docker run get_temperature:latest
 
 
-3) To run a GitLab pipeline from web interface:
+## To run a GitLab pipeline from web interface:
 
 1. Ensure you have a GitLab account. If yes, log in to it. If no, register first
 
