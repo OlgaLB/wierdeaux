@@ -6,7 +6,7 @@
 
 3. Install geckodriver and add it to PATH
 
-4. - 6. Install selenium, beautifulsoup4, requests
+4., 5., 6. Install selenium, beautifulsoup4, requests
 
 7. Change directory to the current and run:
 
