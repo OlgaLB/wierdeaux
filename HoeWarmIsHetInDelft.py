@@ -34,5 +34,5 @@ if __name__ == "__main__":
     driver.get(soup.find("iframe", attrs = {'id':'ifrm_3'})["src"])
     soup = BeautifulSoup(driver.page_source,'html.parser')
     temperature = soup.find("span", attrs = {'id':'ajaxtemp'}).text
-
-    print("Current temperature in Delft in Celcius degrees is: " + temperature)
+    
+    print("Current temperature in Delft in Celcius degrees is: {}".format(temperature))
